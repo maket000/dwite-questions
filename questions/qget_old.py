@@ -2,7 +2,7 @@ import urllib2
 
 months = ["Oct", "Nov", "Dec", "Jan", "Feb"]
 
-for year in xrange(2003, 2007):
+for year in xrange(2002, 2007):
     for month in months:
         for problem in xrange(1,6):
             fname = "Problem%d%s%d.pdf" % (problem, month, year)
@@ -11,7 +11,7 @@ for year in xrange(2003, 2007):
             print loc
             try:
                 response = urllib2.urlopen(loc)
-                pdffile = open(saveloc, 'w')
+                pdffile = open(saveloc, 'wb')
                 pdffile.write(response.read())
                 pdffile.close()
             except:
