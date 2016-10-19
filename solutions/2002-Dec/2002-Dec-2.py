@@ -25,4 +25,3 @@ for _ in xrange(5):
 
 datafile.close()
 outfile.close()
-raw_input()
