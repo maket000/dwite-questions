@@ -34,5 +34,5 @@ while posqueue:
 		posqueue.append((cur[0], cur[1]+1, cur[2]+board[cur[0]][cur[1]]))
 
 outfile = open("OUT4", 'w')
-outfile.write('\n'.join(top5) + '\n')
+outfile.write('\n'.join(top5[::-1]) + '\n')
 outfile.close()
